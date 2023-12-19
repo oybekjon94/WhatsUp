@@ -13,16 +13,16 @@ class PhoneFragment:BaseFragment<FragmentPhoneBinding>(FragmentPhoneBinding::inf
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.state.observe(this::renderUser){ it.user!! }
+        viewModel.state.observe(::renderUser){ it.user!! }
         //shu yerda xatolik ketyabdi
-        viewModel.effects.doOnNext { this.handleEffects() }
+        viewModel.effects.doOnNext { ::handleEffects }
     }
 
     private fun renderUser(user: User?){
 
     }
 
-    private fun handleEffects() {
+    private fun handleEffects(effect: PhoneViewModel.Effect) {
 
     }
 }

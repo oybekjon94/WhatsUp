@@ -1,6 +1,5 @@
 package com.oybekdev.presentation.base
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +24,8 @@ abstract class BaseFragment<Vb: ViewBinding>(private val inflate:(LayoutInflater
         return binding.root
     }
 
+    //reference yuqotadi
+    //garbage collector Vbni memmory leakdan tozalab tashaydi
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

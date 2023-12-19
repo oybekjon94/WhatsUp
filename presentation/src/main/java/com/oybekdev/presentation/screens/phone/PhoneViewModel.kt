@@ -16,13 +16,14 @@ class PhoneViewModel constructor(
         val user: User? = null
     )
 
-    class Effect
-
     class Input
+
+    class Effect
 
     override fun getDefaultState() = State()
 
     override fun processInput(input:Input) {
+
     }
 
 }
